@@ -3,15 +3,39 @@
   <head>
     <meta charset="utf-8">
     <title>YouTube Nightmode</title>
-    <link rel="stylesheet" href="/css/style.css">
+
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
   </head>
   <body>
-    <h1>Nightmode for YouTube</h1>
-    <input type="search" name="search-input" value="" placeholder="Search Videos">
+    <div id="container">
+      <header>
+        <h1>Nightmode for <span>YouTube</span></h1>
+        <p>Watch YouTube at night</p>
+      </header>
+
+      <section>
+        <form id="search-form" name="search-form" onsubmit="return search()">
+          <div class="field-container">
+            <input type="search" id="query" class="search-field" placeholder="Search YouTube...">
+            <input type="submit" name="search-btn" id="search-btn" value="">
+          </div>
+        </form>
+
+        <ul id="results"></ul>
+        <div id="buttons"></div>
+      </section>
+
+      <footer>
+        <p>Copyright &copy; 2017, Kevin Duong</p>
+      </footer>
+  </div>
 
     <script
   src="https://code.jquery.com/jquery-3.2.1.min.js"
   integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
   crossorigin="anonymous"></script>
+  <script src="assets/js/script.js"></script>
   </body>
 </html>
